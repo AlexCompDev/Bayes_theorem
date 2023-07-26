@@ -10,7 +10,6 @@ def bayes_theorem(p_a, p_b_given_a, p_b_given_not_a):
     return p_a_given_b
 
 # Вводим входные данные с помощью функции input
-
 p_b_description = str(input('Введите описание события: '))
 p_a_description = str(input('Введите описание предшествующего (связанного) события: '))
 p_a = float(input(f"Какова вероятность события - {p_a_description} в %: "))/100
@@ -21,5 +20,4 @@ p_b_given_not_a = float(input(f"Какова вероятность того, ч
 result = format(bayes_theorem(p_a, p_b_given_a, p_b_given_not_a)*100, ".12f")
 
 # Выводим результат с помощью функции print
-
 print(f"Если {p_b_description} ({p_b*100}%), то вероятность того, что произошло событие ({p_a_description}) равна:", result, '%')
